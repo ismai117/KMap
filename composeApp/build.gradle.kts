@@ -3,6 +3,7 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 plugins {
     alias(libs.plugins.multiplatform)
     alias(libs.plugins.kotlinCocoapods)
+    alias(libs.plugins.compose.compiler)
     alias(libs.plugins.compose)
     alias(libs.plugins.android.application)
     alias(libs.plugins.buildConfig)
@@ -33,7 +34,7 @@ kotlin {
         summary = "Some description for the Shared Module"
         homepage = "Link to the Shared Module homepage"
         version = "1.0"
-        ios.deploymentTarget = "17.0"
+        ios.deploymentTarget = "15.4"
         podfile = project.file("../iosApp/Podfile")
         framework {
             baseName = "composeApp"
@@ -120,9 +121,6 @@ android {
     }
     buildFeatures {
         compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.4"
     }
 }
 
