@@ -7,6 +7,7 @@ pluginManagement {
         gradlePluginPortal()
         mavenCentral()
         maven("https://jogamp.org/deployment/maven")
+        maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap")
     }
 }
 
@@ -15,5 +16,6 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven("https://jogamp.org/deployment/maven")
+        maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap")
     }
 }
