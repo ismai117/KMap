@@ -99,7 +99,6 @@
 			buildConfigurationList = A93A954529CC810D00F8E227 /* Build configuration list for PBXNativeTarget "iosApp" */;
 			buildPhases = (
 				64DD502E482B858DD1EFE882 /* [CP] Check Pods Manifest.lock */,
-				A9D80A052AAB5CDE006C8738 /* ShellScript */,
 				A93A953329CC810C00F8E227 /* Sources */,
 				A93A953429CC810C00F8E227 /* Frameworks */,
 				A93A953529CC810C00F8E227 /* Resources */,
@@ -197,23 +196,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iosApp/Pods-iosApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		A9D80A052AAB5CDE006C8738 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cd \"$SRCROOT/..\"\n./gradlew :composeApp:embedAndSignAppleFrameworkForXcode\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -373,7 +355,7 @@
 				OTHER_LDFLAGS = (
 					"${inherited}",
 					"-framework",
-					ComposeApp,
+					composeApp,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.ncgroup.kmap.iosApp;
 				PRODUCT_NAME = KMap;
@@ -412,7 +394,7 @@
 				OTHER_LDFLAGS = (
 					"${inherited}",
 					"-framework",
-					ComposeApp,
+					composeApp,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.ncgroup.kmap.iosApp;
 				PRODUCT_NAME = KMap;
