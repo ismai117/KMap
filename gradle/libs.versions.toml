@@ -1,17 +1,17 @@
 [versions]
 
-kotlin = "1.9.21"
-compose = "1.5.12"
+kotlin = "2.0.0"
+compose = "1.6.10"
 agp = "8.2.2"
 androidx-appcompat = "1.6.1"
-androidx-activityCompose = "1.8.2"
-compose-uitooling = "1.6.1"
+androidx-activityCompose = "1.9.0"
+compose-uitooling = "1.6.7"
 napier = "2.7.1"
 buildConfig = "4.1.1"
-kotlinx-coroutines = "1.7.3"
+kotlinx-coroutines = "1.8.1"
 moko-mvvm = "0.16.1"
-ktor = "2.3.7"
-kotlinx-serialization = "1.6.2"
+ktor = "2.3.10"
+kotlinx-serialization = "1.6.3"
 multiplatformSettings = "1.1.1"
 androidGoogleMap = "4.3.0"
 
@@ -43,3 +43,4 @@ compose = { id = "org.jetbrains.compose", version.ref = "compose" }
 android-application = { id = "com.android.application", version.ref = "agp" }
 buildConfig = { id = "com.github.gmazzo.buildconfig", version.ref = "buildConfig" }
 kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

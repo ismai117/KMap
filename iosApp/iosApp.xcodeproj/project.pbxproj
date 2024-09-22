@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		64CCBE1CC1AE731893074573 /* libPods-iosApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38418ECA1BBE099CC62B3104 /* libPods-iosApp.a */; };
+		662296944E681F9C2F05D72A /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2E6FA3E951D9C643C01489 /* Pods_iosApp.framework */; };
 		A93A953B29CC810C00F8E227 /* iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93A953A29CC810C00F8E227 /* iosApp.swift */; };
 		A93A953F29CC810D00F8E227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93A953E29CC810D00F8E227 /* Assets.xcassets */; };
 		A93A954229CC810D00F8E227 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93A954129CC810D00F8E227 /* Preview Assets.xcassets */; };
@@ -15,13 +15,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		38418ECA1BBE099CC62B3104 /* libPods-iosApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iosApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F458E4E8D4644BB4C6410B /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.release.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
 		60DE809967786C92EAF6FAD5 /* Pods-iosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.debug.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A93A953729CC810C00F8E227 /* KMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93A953A29CC810C00F8E227 /* iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosApp.swift; sourceTree = "<group>"; };
 		A93A953E29CC810D00F8E227 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A93A954129CC810D00F8E227 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CD2E6FA3E951D9C643C01489 /* Pods_iosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7B80BF2B77350800EBE205 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -30,7 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64CCBE1CC1AE731893074573 /* libPods-iosApp.a in Frameworks */,
+				662296944E681F9C2F05D72A /* Pods_iosApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,7 @@
 		C4127409AE3703430489E7BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				38418ECA1BBE099CC62B3104 /* libPods-iosApp.a */,
+				CD2E6FA3E951D9C643C01489 /* Pods_iosApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -99,7 +99,6 @@
 			buildConfigurationList = A93A954529CC810D00F8E227 /* Build configuration list for PBXNativeTarget "iosApp" */;
 			buildPhases = (
 				64DD502E482B858DD1EFE882 /* [CP] Check Pods Manifest.lock */,
-				A9D80A052AAB5CDE006C8738 /* ShellScript */,
 				A93A953329CC810C00F8E227 /* Sources */,
 				A93A953429CC810C00F8E227 /* Frameworks */,
 				A93A953529CC810C00F8E227 /* Resources */,
@@ -197,23 +196,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iosApp/Pods-iosApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		A9D80A052AAB5CDE006C8738 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cd \"$SRCROOT/..\"\n./gradlew :composeApp:embedAndSignAppleFrameworkForXcode\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -373,7 +355,7 @@
 				OTHER_LDFLAGS = (
 					"${inherited}",
 					"-framework",
-					ComposeApp,
+					composeApp,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.ncgroup.kmap.iosApp;
 				PRODUCT_NAME = KMap;
@@ -412,7 +394,7 @@
 				OTHER_LDFLAGS = (
 					"${inherited}",
 					"-framework",
-					ComposeApp,
+					composeApp,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.ncgroup.kmap.iosApp;
 				PRODUCT_NAME = KMap;

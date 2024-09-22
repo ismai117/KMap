@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name                     = 'composeApp'
-    spec.version                  = '1.0'
+    spec.version                  = '1.0.6'
     spec.homepage                 = 'Link to the Shared Module homepage'
     spec.source                   = { :http=> ''}
     spec.authors                  = ''
@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
     spec.summary                  = 'Some description for the Shared Module'
     spec.vendored_frameworks      = 'build/cocoapods/framework/composeApp.framework'
     spec.libraries                = 'c++'
-    spec.ios.deployment_target = '17.0'
+    spec.ios.deployment_target    = '15.4'
     spec.dependency 'GoogleMaps'
                 
     if !Dir.exist?('build/cocoapods/framework/composeApp.framework') || Dir.empty?('build/cocoapods/framework/composeApp.framework')
@@ -21,6 +21,10 @@ Pod::Spec.new do |spec|
 
         Alternatively, proper pod installation is performed during Gradle sync in the IDE (if Podfile location is set)"
     end
+                
+    spec.xcconfig = {
+        'ENABLE_USER_SCRIPT_SANDBOXING' => 'NO',
+    }
                 
     spec.pod_target_xcconfig = {
         'KOTLIN_PROJECT_PATH' => ':composeApp',
@@ -46,5 +50,5 @@ Pod::Spec.new do |spec|
             SCRIPT
         }
     ]
-    spec.resources = ['build/compose/ios/composeApp/compose-resources']
+    spec.resources = ['build/compose/cocoapods/compose-resources']
 end

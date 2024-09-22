@@ -1,6 +1,10 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '17.0'
+source 'https://github.com/CocoaPods/Specs.git'
 
 target 'iosApp' do
-   pod 'GoogleMaps'
+    use_frameworks!
+    platform :ios, '15.4'
+    pod 'composeApp', :path => '../composeApp'
+    pod 'GoogleMaps', '9.0.0'
 end
